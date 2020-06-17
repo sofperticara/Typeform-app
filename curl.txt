@@ -1,0 +1,58 @@
+RICHIESTA ACCESS TOKEN
+curl --request POST \
+  --url https://api.typeform.com/oauth/token \
+  --data-urlencode 'grant_type=authorization_code' \
+  --data-urlencode 'code=B4QWeHMsoEMVArJXUoY2Nh9CFQocHs3eBtAmQgrFxNX4' \
+  --data-urlencode 'client_id=BaJgJQW1QNrknH9i6Gy4m4EU7GUDiMSWN2RrqjuZeYUL' \
+  --data-urlencode 'client_secret=Fdut6jdi98Byu7u36XdK6s8phvbCVBGzwr3HCnPX7rq8' \
+  --data-urlencode 'redirect_uri=https://localhost:5000/callback'
+
+CODICE PER VEDERE LE IMMAGINI PRESENTI SULL'ACCOUNT
+curl --request GET \
+  --url https://api.typeform.com/images \
+  --header 'Authorization: Bearer G7DFtK1U8YG8zvAFRH42gByemXVGFD5rVBrLzpG9jeBP' 
+
+CODICE PER VEDERE I TEMI PRESENTI SULL'ACCOUNT
+curl --request GET \
+  --url https://api.typeform.com/themes \
+  --header 'Authorization: Bearer C9rUc6kY2fU6mtiXhn5vv4HaqnW25pSuQyG6kQfxAw4Q'
+
+CODICE PER VEDERE I FORMS PRESENTI SULL'ACCOUNT
+curl --request GET \
+  --url https://api.typeform.com/forms \
+  --header 'Authorization: Bearer B4yBTKwMLNZ5dfghnqkd1j3kPdtXrtJhc6WXLKAmmmAe'
+
+CODICE PER VEDERE LE EVENTUALI RISPOSTE DI UN QUESTIONARIO
+
+curl --request GET \
+  --url 'https://api.typeform.com/forms/NDrG3V/responses?since=2017-07-09T00%3A00%3A00&until=2020-07-10T00%3A00%3A00' \
+  --header 'authorization: bearer 5wAHYGeWtdHRrSob7mM37dRNM7CRn52U8Z8SZqa4XbWG'
+
+curl --request POST \
+  --url https://api.typeform.com/oauth/token \
+  --data-urlencode 'grant_type=authorization_code' \
+  --data-urlencode 'code=47auEU78CNrtzkYLSHYnzSWV87wWSmY6p2vstJtr7Bfj' \
+  --data-urlencode 'client_id=BaJgJQW1QNrknH9i6Gy4m4EU7GUDiMSWN2RrqjuZeYUL' \
+  --data-urlencode 'client_secret=Fdut6jdi98Byu7u36XdK6s8phvbCVBGzwr3HCnPX7rq8' \
+  --data-urlencode 'redirect_uri=https://localhost:5000/callback'
+
+
+
+
+CODICE PER POSTARE UN'IMMAGINE TRAMITE FILE JSON
+curl --request POST \
+--url https://api.typeform.com/images \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+-d @immagine.json \
+--header 'Authorization: Bearer EHf7u8fiZJjcFMBRdBQ7JKhPnpLquMB1CohsvPZGaTXm' 
+
+
+CODICE PER POSTARE UNA FORM TRAMITE FILE JSON
+curl --request POST \
+--url https://api.typeform.com/forms \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+-d @f_man.json \
+--header 'Authorization: Bearer 5ipPrfmipex8hERQgfmgPgHQ6xbVtv3e2jeH2VNViQgH' 
+

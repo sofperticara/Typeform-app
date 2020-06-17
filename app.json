@@ -1,0 +1,23 @@
+{
+    "name": "results-example",
+    "env": {
+        "TYPEFORM_API_BASE_URL": {
+            "required": true,
+            "value": "https://api.typeform.com",
+            "description": "An entry point for the Typeform services (OAuth + API)"
+        },
+        "APPLICATION_URL": {
+            "required": true,
+            "value": "https://<your_app_name>.herokuapp.com",
+            "description": "Application URL which will be used to construct a callback URL for OAuth mechanism"
+        },
+        "CLIENT_ID": {
+            "required": true,
+            "description": "The Client ID you've got from Typeform"
+        },
+        "CLIENT_SECRET": {
+            "required": true,
+            "description": "The Client Secret you've got from Typeform"
+        }
+    }
+}
